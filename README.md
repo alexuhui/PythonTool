@@ -6,7 +6,7 @@ python tool scripts<br>
 便可在需要执行工具的目录下，打开命令行，直接执行脚本<br>
 <br>
 比如：<br>
-``` bash
+```bash
 py_rm_refix.py img_
 ```
 可以把当前目录下带前缀`img_`的文件名，把前缀去了。`img_xxx` --> `xxx`
