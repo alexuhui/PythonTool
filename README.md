@@ -9,4 +9,4 @@ python tool scripts<br>
 ``` bash
 py_rm_refix.py img_
 ```
-可以把当前目录下带前缀`img_`的文件名，把前缀去了。`img_xxx -> xxx`
+可以把当前目录下带前缀`img_`的文件名，把前缀去了。`img_xxx` --> `xxx`
