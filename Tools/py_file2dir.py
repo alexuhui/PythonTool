@@ -3,6 +3,7 @@
 import os
 import argparse
 import shutil
+import re
 
 # 创建ArgumentParser对象
 parser = argparse.ArgumentParser(description='Description of your script.')
@@ -47,10 +48,15 @@ def organize_files():
                 if execution:
                     shutil.move(filename, os.path.join(folder_name, filename))
 
-                new_filename = newFileName
-                if new_filename == None or new_filename == "":
-                    new_filename = f"{folder_name}_{filename}"
+                # 构建新的文件名
+                if useRe: 
+                    new_filename = re.sub(pattern, newFileName, filename)
+                else:
+                    new_filename = newFileName
 
+                if new_filename == None or new_filename == "":
+                    new_filename = filename
+                
                 if not (file_extension in new_filename):
                     new_filename += file_extension
 
