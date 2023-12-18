@@ -23,14 +23,16 @@ recheck = args.recheck
 search = args.search
 
 getpath = False
-def ignore(directory):
+def ignoreFile(directory):
     if search:
         os.system(f"git ls-files -v | grep -i ^S")
     else:
         # 遍历目录中的所有文件
         for filename in os.listdir(directory):
-            file_path = os.path.join(directory, filename)
-            if filename == pathname :
+            # file_path = os.path.join(directory, filename)
+            # print(f'file_path : {file_path}   filename : {filename}   pathname : {pathname}' )
+            # if file_path == pathname :
+            if filename == os.path.basename(pathname) :
                 global getpath
                 getpath = True
                 if ignore :
@@ -44,5 +46,4 @@ def ignore(directory):
         if not getpath :
             print(f"can not find dir or file : {pathname}")
 
-# 执行批量重命名
-ignore(directory)
+ignoreFile(directory)
