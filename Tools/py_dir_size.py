@@ -19,7 +19,8 @@ def get_total_folder_size(folder_path):
             try:
                 total_size += os.path.getsize(file_path)
             except Exception as e:
-                print('error ', filename)
+                #print('error ', filename)
+                pass
             else:
                 pass
             finally:
